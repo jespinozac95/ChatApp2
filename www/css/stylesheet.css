@@ -502,13 +502,13 @@ body {
 .me {
 	clear:both;
 	float:left;
-	margin-bottom:10px;
+	margin-bottom:1px;
 }
 
 .you {
 	clear:both;
 	float:right;
-	margin-bottom:10px;
+	margin-bottom:1px;
 }
 
 .you .image{
