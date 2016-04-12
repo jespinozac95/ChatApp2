@@ -29,7 +29,7 @@ body {
 
 .homebanner {
 	height: 120px;
-	background-color: #3c4446;
+	background-color: #006699;
 }
 
 .homebannertext {
@@ -108,7 +108,7 @@ body {
 
 #create {
 	width: 300px;
-	height: 100px;
+	height: 50px;
 	background-color: #70b1d1;
 	text-align:center;
 	display: block;
@@ -124,7 +124,7 @@ body {
 	text-decoration: none;
 }
 #createbutton {
-	padding-top: 28px;
+	padding-top: 10px;
 }
 #little {
 	font-weight: normal;
@@ -148,7 +148,7 @@ body {
 
 /* ------ Connected ------*/
 
-.connected {
+.connected2 {
 	text-align:center;
 	display: block;
 	margin:0px auto;
@@ -159,17 +159,32 @@ body {
 	box-shadow:0px 3px 3px #e3e4e6;
 	color: #637277;
 }
+.connected2 h2 {
+	padding-top: 20px;
+}
+
+.connected {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 700px;
+	height: 300px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+}
 .connected h2 {
 	padding-top: 20px;
 }
 .infoConnected {
 	text-align: left;
-	float: right;
+	float: center;
 	margin: 65px 165px 0 0;
 }
 #creatorImage {
 	float: left;
-	margin: 90px 0 0 140px;
+	margin: 100px 30px 30px 140px;
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -609,9 +624,6 @@ footer {
 /* ---------------------- HIDE -------------------------- */
 
 
-.connected {
-	display: none;
-}
 
 .personinside {
 	display: none;
@@ -631,15 +643,4 @@ footer {
 
 .nomessages{
 	display:none;
-}
-
-footer {
-	display:none;
-}
-
-.chatscreen{
-	display:none;
-	width:700px;
-	margin: 0 auto 200px;
-	overflow:hidden;
 }

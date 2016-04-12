@@ -3,7 +3,8 @@
 $(function(){
 
 	// getting the id of the room from the url
-	var id = Number(window.location.pathname.match(/\/chat\/(\d+)$/)[1]);
+	//var id = Number(window.location.pathname.match(/\/chat.html\/(\d+)$/)[1]);
+	var id = 1234;
 
 	// connect to the socket
 	var socket = io();
@@ -44,6 +45,35 @@ $(function(){
 		noMessagesImage = $("#noMessagesImage");
 
 
+		loginForm.on('submit', function(e){
+
+				alert("ENTRO A LOGINFORM.ON");
+				e.preventDefault();
+
+				name = $.trim(yourName.val());
+				
+				if(name.length < 1){
+					alert("Please enter a nick name longer than 1 character!");
+					return;
+				}
+
+				email = yourEmail.val();
+
+				/*if(!isValid(email)) {
+					alert("Please enter a valid email!");
+				}
+				else {
+*/
+				alert("ENTRO A LOGINFORM.ON nombre = "+name+", email = "+email);
+					showMessage("inviteSomebody");
+
+					// call the server-side function 'login' and send user's parameters
+					socket.emit('login', {user: name, avatar: email, id: id});
+				//}
+			
+			});
+
+
 	// on connection to server get the id of person's room
 	socket.on('connect', function(){
 
@@ -57,6 +87,8 @@ $(function(){
 
 	// receive the names and avatars of all people in the chat room
 	socket.on('peopleinchat', function(data){
+
+		alert(data);
 
 		if(data.number === 0){
 
@@ -75,16 +107,16 @@ $(function(){
 
 				email = yourEmail.val();
 
-				if(!isValid(email)) {
+				/*if(!isValid(email)) {
 					alert("Please enter a valid email!");
 				}
 				else {
-
+*/
 					showMessage("inviteSomebody");
 
 					// call the server-side function 'login' and send user's parameters
 					socket.emit('login', {user: name, avatar: email, id: id});
-				}
+				//}
 			
 			});
 		}

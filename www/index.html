@@ -21,24 +21,37 @@
 
 	<header class="homebanner">
 
-			<h1 class="homebannertext">
-				<a href="" id="logo">Chat<span>App</span></a>
+			<h1 class="homebannertext">	
+				<a href="/index.html" id="logo">Chat<span>App</span></a>
 			</h1>
 
 	</header>
-
 	<section>
 
-		<div class="homesection">			
-			<a title="Create" href="/create" id="create">
-				<div id="createbutton">
-					<div id="little">Create a Private</div>
-					<div id="big">CHAT ROOM!</div>
-				</div>
-			</a>			
+		<div class="connected">
+
+			<img src="../img/unnamed.jpg" id="creatorImage" />
+
+			<div class="infoConnected">
+				<h2>Inicio de Sesión</h2>
+				<br/>
+
+				<form class="loginForm">
+					<input type="text" id="yourName" placeholder="Nombre" /><br/>
+					<input type="password" id="yourEmail" placeholder="Contraseña" /><br/>
+					<input type="submit" id="yourEnter" value="Ingresar" />
+				</form>
+
+			</div>
+
 		</div>
 
 	</section>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="../socket.io/socket.io.js"></script>
+	<script src="../js/index.js"></script>
 
 </body>
 </html>
